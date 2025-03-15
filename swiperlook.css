@@ -1,0 +1,53 @@
+ .swiper {
+  overflow: initial;
+}
+
+.swiper-slider_component {
+  transform: rotateX(26deg) rotateY(-46deg) rotateZ(17deg);
+}
+
+/* Styling Active States */
+.active-title {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.swiper-slide.is-main {
+  transition: 1s ease transform;
+}
+
+.swiper-slide.is-active {
+  transform: scale(1.5);
+}
+
+.is-main .project-visual-image {
+  transform: scale(2.5);
+  transition: 1s ease transform;
+}
+
+.is-active .project-visual-image {
+  transform: scale(1) !important;
+}
+
+.project-title.is-active {
+  opacity: 1;
+  color: #1c1c1c;
+}
+
+.project-title.is-active .titles-dot {
+  background-color: #1c1c1c;
+}
+
+/* Hover States */
+.project-visual-wrapper .project-highlight {
+  opacity: 0;
+  transition: 0.3s ease opacity;
+}
+
+.project-visual-wrapper:hover .project-highlight {
+  opacity: 1;
+}
+
+/* video loading screen */
+.is-loading .load-screen {
+  opacity: 1;
+}
