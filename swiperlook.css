@@ -28,7 +28,7 @@
 }
 
 .is-main .project-visual-image {
-  transform: scale(2.0); /* vorher 2.5 */
+  transform: scale(2.5) !important; /* vorher 2.5 */
   transition: 1s ease transform;
   transform-origin: center center;
 }
