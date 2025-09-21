@@ -1,9 +1,17 @@
- .swiper {
-  overflow: initial;
+/* Swiper Grundstruktur */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  overflow: visible !important;
+}
+
+.swiper {
+  overflow: visible !important;
 }
 
 .swiper-slider_component {
   transform: rotateX(26deg) rotateY(-46deg) rotateZ(17deg);
+  transform-origin: center center;
 }
 
 /* Styling Active States */
@@ -20,8 +28,9 @@
 }
 
 .is-main .project-visual-image {
-  transform: scale(2.5);
+  transform: scale(2.0); /* vorher 2.5 */
   transition: 1s ease transform;
+  transform-origin: center center;
 }
 
 .is-active .project-visual-image {
