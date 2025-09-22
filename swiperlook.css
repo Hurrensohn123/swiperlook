@@ -1,4 +1,3 @@
-/* Swiper Grundstruktur */
 .swiper,
 .swiper-wrapper,
 .swiper-slide {
@@ -14,33 +13,33 @@
   transform-origin: center center;
 }
 
-/* --- Active States --- */
+/* --- Slides Scaling --- */
 
-/* Standard-Slides */
+/* Standard */
 .swiper-slide {
   transition: transform 1s ease;
   transform-origin: center center;
 }
 
-/* Aktive Slide größer */
-.swiper-slide.swiper-slide-active {
-  transform: scale(1.2); /* Karte wächst */
+/* Aktive Karte größer */
+.swiper-slide.is-active {
+  transform: scale(1.2); /* kannst auch 1.3 oder 1.5 nehmen */
   z-index: 2;
 }
 
-/* Andere Slides optional etwas kleiner */
-.swiper-slide:not(.swiper-slide-active) {
+/* Andere Karten etwas kleiner */
+.swiper-slide:not(.is-active) {
   transform: scale(0.9);
   z-index: 1;
 }
 
-/* Aktiver Titel */
-.project-title.swiper-slide-active {
+/* --- Titles --- */
+.project-title.is-active {
   opacity: 1;
   color: #1c1c1c;
 }
 
-.project-title.swiper-slide-active .titles-dot {
+.project-title.is-active .titles-dot {
   background-color: #1c1c1c;
 }
 
