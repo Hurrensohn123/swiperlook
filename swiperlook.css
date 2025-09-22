@@ -14,39 +14,37 @@
   transform-origin: center center;
 }
 
-/* Styling Active States */
-.active-title {
-  background-color: rgba(0, 0, 255, 0.1);
-}
+/* --- Active States --- */
 
-.swiper-slide.is-main {
-  transition: 1s ease transform;
-}
-
-.swiper-slide.is-active {
-  transform: scale(1.5);
-}
-
-.is-main .project-visual-image {
-  transform: scale(2.5) !important; /* vorher 2.5 */
-  transition: 1s ease transform;
+/* Standard-Slides */
+.swiper-slide {
+  transition: transform 1s ease;
   transform-origin: center center;
 }
 
-.is-active .project-visual-image {
-  transform: scale(1) !important;
+/* Aktive Slide größer */
+.swiper-slide.swiper-slide-active {
+  transform: scale(1.2); /* Karte wächst */
+  z-index: 2;
 }
 
-.project-title.is-active {
+/* Andere Slides optional etwas kleiner */
+.swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+/* Aktiver Titel */
+.project-title.swiper-slide-active {
   opacity: 1;
   color: #1c1c1c;
 }
 
-.project-title.is-active .titles-dot {
+.project-title.swiper-slide-active .titles-dot {
   background-color: #1c1c1c;
 }
 
-/* Hover States */
+/* --- Hover States --- */
 .project-visual-wrapper .project-highlight {
   opacity: 0;
   transition: 0.3s ease opacity;
@@ -56,7 +54,7 @@
   opacity: 1;
 }
 
-/* video loading screen */
+/* --- Video Loading Screen --- */
 .is-loading .load-screen {
   opacity: 1;
 }
